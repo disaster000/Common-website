@@ -1,4 +1,10 @@
 h1{
-  font-family: "open sans";
-  font-size: 24pt;
+	font-family: "open sans";
+	font-size: 24pt;
+	transition: color 1s, text-shadow 1s;
+}
+
+h1:hover{
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
