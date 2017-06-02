@@ -9,6 +9,32 @@
 	<script src="script.js">
 		var triangleVertexPositionBuffer;
 		var squareVertexPositionBuffer;
+		function initBuffers() {
+			//définition du tampon du triangle
+			triangleVertexPositionBuffer = gl.createBuffer();
+			gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+			var vertices = [
+				0.0,  1.0,  0.0,
+				-1.0, -1.0,  0.0,
+				1.0, -1.0,  0.0
+			];
+			gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+			triangleVertexPositionBuffer.itemSize = 3;
+			triangleVertexPositionBuffer.numItems = 3;
+			
+			//définition du tampon du carré
+			squareVertexPositionBuffer = gl.createBuffer();
+			gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
+			vertices = [
+				1.0,  1.0,  0.0,
+				-1.0,  1.0,  0.0,
+				1.0, -1.0,  0.0,
+				-1.0, -1.0,  0.0
+			];
+			gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+			squareVertexPositionBuffer.itemSize = 3;
+			squareVertexPositionBuffer.numItems = 4;
+		}
 		
 		function webGLStart() { 
 			var canvas = document.getElementById("webgl-canvas");
@@ -27,7 +53,9 @@
 	<h1>Pas de nom</h1>
 	
 	<!-- canvas WebGL -->
-	<canvas id="webgl-canvas" style="border: none;" width="500" height="500"></canvas>
+	<div style="text-align:center;">
+		<canvas id="webgl-canvas" style="border: none;" width="500" height="500"></canvas>
+	</div>
 	
 </body>
 </html>
