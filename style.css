@@ -9,8 +9,40 @@
 	text-shadow: 0 0 2px rgba(0,0,0,0.9);
 }
 
+.unrealism{
+	position: absolute;
+	border-bottom: solid black 1px;
+	text-align: left;
+	width: 250px;
+	padding-bottom: 10px;
+}
+
 .definition{
 	color: #cccccc;
 	font-style: italic;
 	font-size: 12pt;
+	position: absolute;
+	top: 75px;
+	line-height: 30px;
+}
+
+li{
+	display: inline;
+	margin-right: 20px;
+}
+
+ul{
+	position: absolute;
+	right: 20px;
+	top: 30px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	font-family: "open sans";
+}
+
+a:hover{
+	font-weight: bold;
 }
