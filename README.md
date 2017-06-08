@@ -1,6 +1,3 @@
-{ "license" : "CC-BY-SA-4.0" }
-{ "license" : "SEE LICENSE IN <LICENSE>" }
-
 # Common-website
 The creation of the website for the common project with <a href="https://github.com/davidmart1">@davidmart1</a>
 
